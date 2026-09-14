@@ -1,10 +1,15 @@
 import { GamePage } from '../pages/GamePage';
 import { ReportPage } from '../pages/ReportPage';
 import { StartPage } from '../pages/StartPage';
+import { ShowcasePage } from '../showcase/ShowcasePage';
 import { useGameSession } from '../hooks/useGameSession';
 
 export function App() {
   const session = useGameSession();
+
+  if (window.location.pathname === '/showcase') {
+    return <ShowcasePage />;
+  }
 
   if (!session.gameState) {
     return <StartPage onStart={session.start} />;
