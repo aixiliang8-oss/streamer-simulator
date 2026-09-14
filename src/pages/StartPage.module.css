@@ -1,0 +1,59 @@
+.page {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cover {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--bg-mid);
+  background-image: var(--room-glow-soft);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 40%,
+    color-mix(in srgb, var(--bg-dark) 65%, transparent) 75%,
+    var(--bg-dark) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-16);
+  padding: var(--space-32) var(--space-24)
+    max(var(--space-32), env(safe-area-inset-bottom));
+  text-align: center;
+}
+
+.content h1 {
+  margin: 0;
+  color: var(--paper);
+  font-size: var(--font-size-title);
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+  text-shadow: var(--title-shadow);
+}
+
+.slogan {
+  margin: 0;
+  color: var(--paper-muted);
+  font-size: var(--font-size-body);
+  line-height: 1.7;
+}

@@ -1,0 +1,88 @@
+.hud {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-12);
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 1rem 2.1rem 1fr 1.6rem;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.barIcon {
+  font-size: 0.8rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.barLabel {
+  color: var(--paper-muted);
+  font-size: var(--font-size-micro);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.barTrack {
+  position: relative;
+  height: var(--space-4);
+  overflow: hidden;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+}
+
+.barFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background: linear-gradient(90deg, var(--violet), var(--brand-pink));
+}
+
+.barFillDanger {
+  background: var(--danger);
+}
+
+.barValue {
+  color: var(--paper);
+  font-size: var(--font-size-micro);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: right;
+}
+
+.barValue.danger {
+  color: var(--danger);
+}
+
+.summaryGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4) var(--space-16);
+  margin: 0;
+  color: var(--paper-muted);
+  font-size: var(--font-size-caption);
+  letter-spacing: 0.02em;
+}
+
+.summaryItem {
+  display: inline-flex;
+  gap: var(--space-4);
+}
+
+.summaryItem dt {
+  margin: 0;
+}
+
+.summaryItem dd {
+  margin: 0;
+  color: var(--paper);
+  font-weight: 700;
+}
+
+.summaryItem dd.danger {
+  color: var(--danger);
+}

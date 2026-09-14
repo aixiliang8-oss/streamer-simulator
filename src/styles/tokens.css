@@ -1,0 +1,62 @@
+:root {
+  --bg-dark: #0a0b25;
+  --bg-mid: #171938;
+  --bg-elevated: #2c2950;
+  --brand-pink: #fa76d2;
+  --violet: #5756c3;
+  --paper: #fff4dd;
+  --danger: #ff5d73;
+  --success: #72d98d;
+  --reward-gold: #ffd45c;
+
+  --paper-muted: color-mix(in srgb, var(--paper) 68%, var(--bg-dark));
+  --panel-bg: color-mix(in srgb, var(--bg-dark) 84%, var(--bg-elevated));
+  --panel-bg-strong: color-mix(in srgb, var(--bg-dark) 82%, var(--bg-elevated));
+  --panel-glass: color-mix(in srgb, var(--bg-elevated) 74%, transparent);
+  --panel-border: color-mix(in srgb, var(--violet) 62%, var(--bg-dark));
+  --risk-attention-bg: color-mix(in srgb, var(--danger) 14%, var(--bg-dark));
+  --risk-high-bg: color-mix(in srgb, var(--danger) 26%, var(--bg-dark));
+
+  --room-glow: radial-gradient(
+    circle at 50% 40%,
+    var(--bg-elevated),
+    var(--bg-dark) 56%
+  );
+  --room-glow-soft: radial-gradient(
+    circle at 50% 15%,
+    color-mix(in srgb, var(--violet) 30%, var(--bg-dark)),
+    var(--bg-dark) 48%
+  );
+
+  --shell-shadow: 0 0 var(--space-32)
+    color-mix(in srgb, var(--bg-dark) 75%, transparent);
+  --button-shadow: var(--space-4) var(--space-4) 0 var(--violet);
+  --logo-shadow: var(--space-8) var(--space-8) 0 var(--violet);
+  --title-shadow: var(--space-4) var(--space-4) 0 var(--brand-pink);
+  --card-shadow: var(--space-4) var(--space-4) 0 var(--panel-border);
+  --risk-shadow: var(--space-4) var(--space-4) 0 var(--danger);
+  --warm-glow: var(--space-4) var(--space-4) 0 var(--success);
+  --risk-glow: var(--space-4) var(--space-4) 0 var(--danger);
+  --gold-glow: var(--space-4) var(--space-4) 0 var(--reward-gold);
+  --poster-glow: 0 0 var(--space-24)
+    color-mix(in srgb, var(--brand-pink) 45%, transparent);
+  --live-pulse-color: color-mix(in srgb, var(--brand-pink) 55%, transparent);
+
+  --font-size-title: 2.25rem;
+  --font-size-subtitle: 1.25rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.75rem;
+  --font-size-small: 0.85rem;
+  --font-size-micro: 0.7rem;
+
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+
+  --pixel-border-width: 2px;
+  --control-height: 3rem;
+  --logo-size: 5rem;
+}

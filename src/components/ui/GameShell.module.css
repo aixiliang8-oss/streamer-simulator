@@ -1,0 +1,22 @@
+.shell {
+  position: relative;
+  width: min(100%, 375px);
+  min-height: 100svh;
+  margin-inline: auto;
+  overflow: hidden;
+  color: var(--paper);
+  background: var(--bg-dark);
+  border-inline: var(--pixel-border-width) solid var(--violet);
+  box-shadow: var(--shell-shadow);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 375px) {
+  .shell {
+    border-inline: 0;
+  }
+}

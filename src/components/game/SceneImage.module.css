@@ -1,0 +1,86 @@
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: var(--pixel-border-width) solid var(--panel-border);
+  box-shadow: var(--card-shadow);
+}
+
+.art {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.placeholderIcon {
+  font-size: 4rem;
+  line-height: 1;
+  opacity: 0.35;
+}
+
+.portrait {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  max-height: 92%;
+  object-fit: contain;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.frame[data-mood='daily'] .art {
+  background-color: var(--bg-mid);
+  background-image: radial-gradient(
+    circle at 50% 30%,
+    var(--bg-elevated),
+    var(--bg-dark) 70%
+  );
+  color: var(--violet);
+}
+
+.frame[data-mood='highlight'] .art {
+  background-color: var(--bg-mid);
+  background-image: radial-gradient(
+    circle at 50% 22%,
+    color-mix(in srgb, var(--reward-gold) 32%, var(--bg-elevated)),
+    var(--bg-dark) 72%
+  );
+  color: var(--reward-gold);
+}
+
+.frame[data-mood='tense'] .art {
+  background-color: var(--bg-mid);
+  background-image: radial-gradient(
+    circle at 50% 18%,
+    color-mix(in srgb, var(--danger) 28%, var(--bg-elevated)),
+    var(--bg-dark) 74%
+  );
+  color: var(--danger);
+}
+
+.frame[data-mood='business'] .art {
+  background-color: var(--bg-mid);
+  background-image: radial-gradient(
+    circle at 50% 26%,
+    color-mix(in srgb, var(--success) 22%, var(--bg-elevated)),
+    var(--bg-dark) 72%
+  );
+  color: var(--success);
+}
+
+.frame[data-mood='reflective'] .art {
+  background-color: var(--bg-mid);
+  background-image: radial-gradient(
+    circle at 50% 32%,
+    color-mix(in srgb, var(--brand-pink) 24%, var(--bg-elevated)),
+    var(--bg-dark) 72%
+  );
+  color: var(--brand-pink);
+}

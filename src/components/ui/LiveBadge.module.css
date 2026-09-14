@@ -1,0 +1,25 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-4) var(--space-8);
+  color: var(--paper);
+  font-size: var(--font-size-caption);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  background: color-mix(in srgb, var(--bg-dark) 70%, var(--brand-pink) 12%);
+  border: var(--pixel-border-width) solid var(--brand-pink);
+}
+
+.badge.lg {
+  padding: var(--space-8) var(--space-16);
+  font-size: var(--font-size-body);
+  box-shadow: var(--space-4) var(--space-4) 0 var(--violet);
+}
+
+.dot {
+  width: var(--space-8);
+  height: var(--space-8);
+  background: var(--brand-pink);
+  animation: live-pulse 1.6s ease-in-out infinite;
+}
